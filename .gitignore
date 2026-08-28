@@ -1,10 +1,8 @@
 # === IAR Embedded Workbench for ARM (EWARM) ===
 
 # Build output directories
-Debug/
-Release/
-*/Debug/
-*/Release/
+nucleo_h755zi_q_CM4/
+nucleo_h755zi_q_CM7/
 Obj/
 List/
 Exe/
@@ -60,6 +58,11 @@ settings/
 
 # === Logs ===
 logs/
+
+# === Ninja build state (in case used outside BrowseInfo) ===
+.ninja_deps
+.ninja_log
+build.ninja
 
 # === OS / editor cruft ===
 .DS_Store
