@@ -1,0 +1,70 @@
+# === IAR Embedded Workbench for ARM (EWARM) ===
+
+# Build output directories
+Debug/
+Release/
+*/Debug/
+*/Release/
+Obj/
+List/
+Exe/
+BrowseInfo/
+
+# Compiler/linker intermediate & output files
+*.o
+*.pbi
+*.pbd
+*.r*
+*.d
+*.dep
+*.map
+*.out
+*.a
+*.lib
+
+# Debug information
+*.pbi
+*.sim
+*.dbgdt
+*.xcl
+
+# IAR project workspace/user-specific files
+*.dep
+*.ewp.cfg
+*.ewt
+*.wsdt
+*.eww.bak
+*.ewp.bak
+*.ewd.bak
+
+# IAR settings that are machine/user specific (keep .ewp/.eww/.ewd themselves)
+settings/
+*.dni
+
+# C-SPY debugger files
+*.mac.bak
+
+# Backup files
+*.bak
+*~
+
+# === General C/C++ ===
+*.obj
+*.elf
+*.hex
+*.bin
+*.i
+*.s
+*.lst
+*.su
+
+# === Logs ===
+logs/
+
+# === OS / editor cruft ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
