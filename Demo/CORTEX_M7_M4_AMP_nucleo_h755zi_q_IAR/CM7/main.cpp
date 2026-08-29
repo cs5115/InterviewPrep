@@ -276,7 +276,7 @@ size_t xStringLength;
 }
 /*-----------------------------------------------------------*/
 
-void vGenerateM7ToM4Interrupt( void * xUpdatedMessageBuffer )
+extern "C" void vGenerateM7ToM4Interrupt( void * xUpdatedMessageBuffer )
 {
 MessageBufferHandle_t xUpdatedBuffer = ( MessageBufferHandle_t ) xUpdatedMessageBuffer;
 

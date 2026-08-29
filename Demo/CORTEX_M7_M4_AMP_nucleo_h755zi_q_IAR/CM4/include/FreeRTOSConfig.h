@@ -43,8 +43,14 @@
 /* Ensure stdint is only used by the compiler, and not the assembler. */
 #if defined(__ICCARM__) || defined(__CC_ARM) || defined(__GNUC__)
 	#include <stdint.h>
+	#ifdef __cplusplus
+	extern "C" {
+	#endif
 	extern uint32_t SystemD2Clock;
 	void vGenerateM4ToM7Interrupt( void * xUpdatedMessageBuffer );
+	#ifdef __cplusplus
+	}
+	#endif
 #endif
 
 #define configUSE_PREEMPTION                    1
@@ -119,7 +125,13 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 /* Normal assert() semantics without relying on the provision of an assert.h
 header file. */
 #ifndef __IASMARM__
+    #ifdef __cplusplus
+	extern "C" {
+	#endif
 	void vAssertCalled( const char *pcFile, const uint32_t ulLine );
+	#ifdef __cplusplus
+	}
+	#endif
 #endif /* __IASMARM__ */
 #define configASSERT( x ) if( ( x ) == 0 ) { vAssertCalled( __FILE__, __LINE__ ); }
 

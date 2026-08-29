@@ -330,7 +330,7 @@ const TickType_t xShortBlockTime = pdMS_TO_TICKS( 200 );
 }
 /*-----------------------------------------------------------*/
 
-void vGenerateM4ToM7Interrupt( void * xUpdatedMessageBuffer )
+extern "C" void vGenerateM4ToM7Interrupt( void * xUpdatedMessageBuffer )
 {
 	/* Called by the implementation of sbRECEIVE_COMPLETED() in FreeRTOSConfig.h.
 	See the comments at the top of this file.  Write the handle of the data
@@ -421,7 +421,7 @@ volatile uint32_t ulInitialCount = ulStartSyncCounters[ ulIndexToTest ];
 }
 /*-----------------------------------------------------------*/
 
-void vAssertCalled( const char *pcFile, const uint32_t ulLine )
+extern "C" void vAssertCalled( const char *pcFile, const uint32_t ulLine )
 {
 char pcLine[ 10 ];
 const uint8_t pucM4AssertFile[] = "M4 Assert hit in file ";
